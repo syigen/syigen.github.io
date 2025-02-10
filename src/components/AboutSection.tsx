@@ -52,7 +52,7 @@ export function AboutSection() {
     ]
 
     return (
-        <section id="about" className="min-h-screen flex items-center py-20">
+        <section id="about" className="flex items-center py-20">
             <FadeInSection>
                 <div className="container mx-auto px-4">
                     <TextGenerateEffect

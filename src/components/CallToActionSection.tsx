@@ -4,7 +4,7 @@ import { FadeInSection } from "@/components/FadeInSection"
 
 export function CallToActionSection() {
   return (
-    <section className="min-h-screen flex items-center bg-primary-light dark:bg-primary-dark text-text-light dark:text-text-dark">
+    <section className="flex items-center bg-primary-light dark:bg-primary-dark text-text-light dark:text-text-dark">
       <FadeInSection>
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-8">Don&lsquo;t Fall Behind in the AI Revolution</h2>
