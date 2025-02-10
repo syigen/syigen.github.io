@@ -1,6 +1,7 @@
 import Link from "next/link"
 import {Button} from "@/components/ui/button"
 import {FadeInSection} from "@/components/FadeInSection"
+import {BackgroundBeams} from "@/components/ui/background-beams";
 
 export function HeroSection() {
     return (
@@ -22,6 +23,7 @@ export function HeroSection() {
                         </Button>
                     </div>
                 </div>
+                <BackgroundBeams />
             </FadeInSection>
         </section>
     )
