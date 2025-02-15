@@ -79,3 +79,6 @@ html {
   }
 }
 
+.container{
+  @apply md:max-w-4xl lg:max-w-7xl;
+}
