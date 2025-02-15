@@ -7,7 +7,7 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 import {ArrowRight, CheckCircle, Github, Mail, MapPin, NetworkIcon} from "lucide-react"
 import {animate, motion, useInView, useMotionValue, useTransform} from "framer-motion"
 import React, {useEffect} from "react"
-import {ThemeToggle} from "@/components/ThemeToggle";
+import {ThemeToggle} from "@/components/ThemeToggle"
 
 export default function Home() {
     const count40 = useMotionValue(0)
@@ -25,7 +25,7 @@ export default function Home() {
     }, [isInView, count40, count60])
 
     return (
-        <div className="flex flex-col min-h-screen items-center justify-center">
+        <>
             <header
                 className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 bg-gr">
                 <div className="container flex h-14 items-center justify-between mx-auto">
@@ -77,15 +77,22 @@ export default function Home() {
                             transition={{delay: 0.6, duration: 0.8}}
                             className="mt-8 flex justify-center gap-4"
                         >
-                            <Button size="lg" onClick={() => {
-                                window.location.href = "https://cal.com/syigen/15min"
-                            }}>
+                            <Button
+                                size="lg"
+                                onClick={() => {
+                                    window.location.href = "https://cal.com/syigen/15min"
+                                }}
+                            >
                                 Schedule a Demo
                                 <ArrowRight className="ml-2 h-4 w-4"/>
                             </Button>
-                            <Button size="lg" variant="outline" onClick={() => {
-                                window.location.href = "https://ceylon.ai"
-                            }}>
+                            <Button
+                                size="lg"
+                                variant="outline"
+                                onClick={() => {
+                                    window.location.href = "https://ceylon.ai"
+                                }}
+                            >
                                 Go to Ceylon
                                 <NetworkIcon className="ml-2 h-4 w-4"/>
                             </Button>
@@ -93,8 +100,8 @@ export default function Home() {
                     </div>
                 </motion.section>
 
-                <section className="py-16 px-4 md:px-6 lg:py-24 lg:px-8 bg-muted">
-                    <div className="container mx-auto">
+                <section className="py-16 px-4 md:px-6 lg:py-24 w-full bg-muted">
+                    <div className="container mx-auto max-w-7xl">
                         <motion.h2
                             initial={{opacity: 0, y: 20}}
                             whileInView={{opacity: 1, y: 0}}
@@ -112,15 +119,15 @@ export default function Home() {
                                 },
                                 {
                                     title: "Disconnected Systems",
-                                    description: "Your systems don't talk to each other effectively"
+                                    description: "Your systems don't talk to each other effectively",
                                 },
                                 {
                                     title: "Underutilized Data",
-                                    description: "Your data isn't working as hard as it could be"
+                                    description: "Your data isn't working as hard as it could be",
                                 },
                                 {
                                     title: "Competitive Disadvantage",
-                                    description: "Your competitors might be pulling ahead"
+                                    description: "Your competitors might be pulling ahead",
                                 },
                             ].map((challenge, index) => (
                                 <motion.div
@@ -188,15 +195,15 @@ export default function Home() {
                     </div>
                 </section>
 
-                <section className="py-16 px-4 md:px-6 lg:py-24 lg:px-8 bg-muted">
-                    <div className="container mx-auto">
+                <section className="py-16 px-4 md:px-6 lg:py-24 w-full bg-muted">
+                    <div className="container mx-auto max-w-7xl">
                         <h2 className="text-3xl font-bold text-center mb-12">SYIGEN: Your AI Implementation Guide</h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
                                 {title: "Assess", description: "We assess your current systems and AI readiness"},
                                 {
                                     title: "Implement",
-                                    description: "We implement Ceylon, our open-source Multi-Agent System"
+                                    description: "We implement Ceylon, our open-source Multi-Agent System",
                                 },
                                 {title: "Support", description: "We provide ongoing support and optimization"},
                             ].map((step, index) => (
@@ -263,7 +270,7 @@ export default function Home() {
                 </section>
 
                 <section id="contact" className="py-16 px-4 md:px-6 lg:py-24 lg:px-8 bg-muted">
-                    <div className="container mx-auto text-center">
+                    <div className="container mx-auto max-w-7xl text-center">
                         <h2 className="text-3xl font-bold mb-8">Transform Your Enterprise with SYIGEN</h2>
                         <div className="flex flex-col items-center gap-4">
                             <div className="flex items-center">
@@ -293,7 +300,7 @@ export default function Home() {
                     © 2025 SYIGEN. All rights reserved.
                 </div>
             </footer>
-        </div>
+        </>
     )
 }
 
